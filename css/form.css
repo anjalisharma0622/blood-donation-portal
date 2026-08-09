@@ -1,0 +1,282 @@
+/* ===== Forms ===== */
+.app-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-row label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 12px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: border-color var(--transition);
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-row input.invalid,
+.form-row select.invalid {
+  border-color: var(--color-primary);
+}
+
+.error-msg {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  min-height: 16px;
+  margin-top: 4px;
+}
+
+/* ===== Success popup ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-overlay.hidden { display: none; }
+
+.popup-box {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.popup-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.popup-box h3 { margin-bottom: 10px; }
+.popup-box p { color: var(--color-gray-dark); font-size: 0.92rem; margin-bottom: 24px; }
+
+/* ===== Find a Donor ===== */
+.search-bar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.search-bar .form-row { margin-bottom: 0; min-width: 200px; }
+
+.donor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.donor-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.donor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.donor-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.donor-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.donor-bg-badge {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.donor-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.donor-city, .donor-phone { color: var(--color-gray-dark); font-size: 0.88rem; }
+
+/* ===== Blood group cards ===== */
+.bg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.bg-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+}
+
+.bg-type {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.bg-card p { font-size: 0.85rem; color: var(--color-gray-dark); }
+
+.compat-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.compat-table th, .compat-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.compat-table th {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+}
+
+.checker-result .checker-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+}
+.checker-result .checker-card p { margin-bottom: 8px; font-size: 0.92rem; }
+
+
+  /* ===== FAQ accordion (native <details>/<summary>, no JS needed) ===== */
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-question {
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  transition: transform var(--transition);
+}
+
+.faq-item[open] .faq-icon { transform: rotate(45deg); }
+
+.faq-answer p {
+  padding-bottom: 20px;
+  color: var(--color-gray-dark);
+  font-size: 0.92rem;
+}
+
+/* ===== Contact page ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-info {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.contact-info-item {
+  margin-bottom: 24px;
+}
+
+.contact-info-item h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.contact-info-item p, .contact-info-item a {
+  font-size: 0.95rem;
+}
+
+.hidden { display: none !important; }

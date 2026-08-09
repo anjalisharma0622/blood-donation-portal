@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Donor | RedThread</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="drop"></span>
+        RedThread
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="donor.html">Become a Donor</a>
+        <a href="finddonor.html">Find a Donor</a>
+        <a href="request.html">Request Blood</a>
+        <a href="bloodgroups.html">Blood Groups</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:64px;">
+      <div class="container">
+        <p class="eyebrow">Search donors</p>
+        <h1 style="font-size:2.2rem; margin:14px 0 24px;">Find a Donor</h1>
+
+        <div class="search-bar">
+          <div class="form-row">
+            <label for="filterBloodGroup">Blood Group</label>
+            <select id="filterBloodGroup">
+              <option value="">All groups</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="filterCity">City</label>
+            <input type="text" id="filterCity" placeholder="e.g. Pune" />
+          </div>
+          <button id="clear-filters" class="btn btn-outline" style="align-self:flex-end;">Clear</button>
+        </div>
+
+        <div id="donor-results" class="donor-grid"></div>
+        <p id="no-results" class="hidden" style="color:var(--color-gray-dark); text-align:center; padding:48px 0;">No donors match your search yet. Try a different blood group or city, or check back soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="drop"></span>
+            RedThread
+          </a>
+          <p>Connecting donors and recipients so no request for blood goes unanswered.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Donation</a></li>
+            <li><a href="bloodgroups.html">Blood Groups</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="donor.html">Become a Donor</a></li>
+            <li><a href="finddonor.html">Find a Donor</a></li>
+            <li><a href="request.html">Request Blood</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="mailto:hello@redthread.org">hello@redthread.org</a></li>
+            <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 RedThread Blood Donation Portal</span>
+        <span>Made with care for donors and patients alike.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

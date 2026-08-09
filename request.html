@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Blood | RedThread</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="drop"></span>
+        RedThread
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="donor.html">Become a Donor</a>
+        <a href="finddonor.html">Find a Donor</a>
+        <a href="request.html">Request Blood</a>
+        <a href="bloodgroups.html">Blood Groups</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:64px;">
+      <div class="container" style="max-width:640px;">
+        <p class="eyebrow">Need blood urgently?</p>
+        <h1 style="font-size:2.2rem; margin:14px 0 8px;">Request Blood</h1>
+        <p style="color:var(--color-gray-dark); margin-bottom:32px;">Submit the patient and hospital details below. Urgent requests are highlighted for donors browsing nearby.</p>
+
+        <form id="request-form" class="app-form" novalidate>
+          <div class="form-row">
+            <label for="patientName">Patient Name</label>
+            <input type="text" id="patientName" name="patientName" placeholder="Patient's full name" required />
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-row-group">
+            <div class="form-row">
+              <label for="bloodGroupNeeded">Blood Group Needed</label>
+              <select id="bloodGroupNeeded" name="bloodGroupNeeded" required>
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>AB+</option><option>AB-</option>
+                <option>O+</option><option>O-</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-row">
+              <label for="urgency">Urgency</label>
+              <select id="urgency" name="urgency" required>
+                <option value="">Select</option>
+                <option>Normal</option>
+                <option>Urgent</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="hospitalName">Hospital Name</label>
+            <input type="text" id="hospitalName" name="hospitalName" placeholder="e.g. City Care Hospital" required />
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-row-group">
+            <div class="form-row">
+              <label for="reqCity">City</label>
+              <input type="text" id="reqCity" name="city" placeholder="e.g. Pune" required />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-row">
+              <label for="contactNumber">Contact Number</label>
+              <input type="tel" id="contactNumber" name="contactNumber" placeholder="10-digit number" required />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px;">Submit Request</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="success-popup" class="popup-overlay hidden">
+      <div class="popup-box">
+        <div class="popup-icon">✓</div>
+        <h3>Request submitted</h3>
+        <p>Your blood request is live. Matching donors in your city will be notified.</p>
+        <button class="btn btn-primary" id="popup-close">Done</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="drop"></span>
+            RedThread
+          </a>
+          <p>Connecting donors and recipients so no request for blood goes unanswered.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Donation</a></li>
+            <li><a href="bloodgroups.html">Blood Groups</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="donor.html">Become a Donor</a></li>
+            <li><a href="finddonor.html">Find a Donor</a></li>
+            <li><a href="request.html">Request Blood</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="mailto:hello@redthread.org">hello@redthread.org</a></li>
+            <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 RedThread Blood Donation Portal</span>
+        <span>Made with care for donors and patients alike.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/request.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Groups | RedThread</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="drop"></span>
+        RedThread
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="donor.html">Become a Donor</a>
+        <a href="finddonor.html">Find a Donor</a>
+        <a href="request.html">Request Blood</a>
+        <a href="bloodgroups.html">Blood Groups</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:64px;">
+      <div class="container">
+        <p class="eyebrow">Know your type</p>
+        <h1 style="font-size:2.2rem; margin:14px 0 24px;">Blood Group Information</h1>
+
+        <div class="bg-grid">
+          <div class="bg-card"><div class="bg-type">A+</div><p>Can receive from A+, A-, O+, O-. Can donate to A+, AB+.</p></div>
+          <div class="bg-card"><div class="bg-type">A-</div><p>Can receive from A-, O-. Can donate to A+, A-, AB+, AB-.</p></div>
+          <div class="bg-card"><div class="bg-type">B+</div><p>Can receive from B+, B-, O+, O-. Can donate to B+, AB+.</p></div>
+          <div class="bg-card"><div class="bg-type">B-</div><p>Can receive from B-, O-. Can donate to B+, B-, AB+, AB-.</p></div>
+          <div class="bg-card"><div class="bg-type">AB+</div><p>Universal recipient — can receive from all types. Can donate to AB+.</p></div>
+          <div class="bg-card"><div class="bg-type">AB-</div><p>Can receive from A-, B-, AB-, O-. Can donate to AB+, AB-.</p></div>
+          <div class="bg-card"><div class="bg-type">O+</div><p>Can receive from O+, O-. Can donate to A+, B+, AB+, O+.</p></div>
+          <div class="bg-card"><div class="bg-type">O-</div><p>Universal donor — can donate to all types. Can receive from O-.</p></div>
+        </div>
+
+        <h2 style="margin:56px 0 20px;">Compatibility Table</h2>
+        <div style="overflow-x:auto;">
+          <table class="compat-table">
+            <thead>
+              <tr><th>Blood Type</th><th>Can Donate To</th><th>Can Receive From</th></tr>
+            </thead>
+
+            <tbody>
+              <tr><td>A+</td><td>A+, AB+</td><td>A+, A-, O+, O-</td></tr>
+              <tr><td>A-</td><td>A+, A-, AB+, AB-</td><td>A-, O-</td></tr>
+              <tr><td>B+</td><td>B+, AB+</td><td>B+, B-, O+, O-</td></tr>
+              <tr><td>B-</td><td>B+, B-, AB+, AB-</td><td>B-, O-</td></tr>
+              <tr><td>AB+</td><td>AB+</td><td>Everyone</td></tr>
+              <tr><td>AB-</td><td>AB+, AB-</td><td>A-, B-, AB-, O-</td></tr>
+              <tr><td>O+</td><td>A+, B+, AB+, O+</td><td>O+, O-</td></tr>
+              <tr><td>O-</td><td>Everyone</td><td>O-</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="margin:56px 0 20px;">Compatibility Checker</h2>
+        <div class="form-row-group" style="max-width:480px; margin-bottom:24px;">
+          <div class="form-row">
+            <label for="checkerType">Select your blood type</label>
+            <select id="checkerType">
+              <option value="">Select</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="checker-result" class="checker-result"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="drop"></span>
+            RedThread
+          </a>
+          
+          <p>Connecting donors and recipients so no request for blood goes unanswered.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Donation</a></li>
+            <li><a href="bloodgroups.html">Blood Groups</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="donor.html">Become a Donor</a></li>
+            <li><a href="finddonor.html">Find a Donor</a></li>
+            <li><a href="request.html">Request Blood</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="mailto:hello@redthread.org">hello@redthread.org</a></li>
+            <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 RedThread Blood Donation Portal</span>
+        <span>Made with care for donors and patients alike.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
